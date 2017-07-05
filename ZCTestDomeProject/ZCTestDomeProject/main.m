@@ -113,8 +113,15 @@ int main(int argc, char * argv[]) {
         printfList(listNodes);
         listNodes = reverseList(listNodes);
         printfList(listNodes);
-        printf("%d", getTheBottomNumberOfData(listNodes, 2)->data);
-        printf("%d", getTheData(listNodes, 5)->data);
+        printf("%d\n", getTheBottomNumberOfData(listNodes, 2)->data);
+        printf("%d\n", getTheData(listNodes, 5)->data);
+        
+        int testA = 5;
+        int *testA_p = &testA;
+        printf("%d ---- %x ---- %x\n", *testA_p, testA_p, &testA);
+        
+        int **testA_pp = &testA_p;
+        printf("%d ----\n ", **testA_pp);
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
